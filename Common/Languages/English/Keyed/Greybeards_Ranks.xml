@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <ESCP_Rank_Mentor_Greybeards>Master:</ESCP_Rank_Mentor_Greybeards>
+    <ESCP_Rank_Promote_Greybeards>Walk Further on the Way</ESCP_Rank_Promote_Greybeards>
+    <ESCP_Rank_Promoted_Text_Greybeards>The Greybeards have spoken in silence. {0} walks the Way as {1}.</ESCP_Rank_Promoted_Text_Greybeards>
+    <ESCP_Rank_Rally_Title_Greybeards>{0} speaks a single quiet word</ESCP_Rank_Rally_Title_Greybeards>
+    <ESCP_Rank_Rally_Text_Greybeards>{0} speaks a single quiet word, and every one of {1} on the field feels steadier for it.</ESCP_Rank_Rally_Text_Greybeards>
+    <ESCP_Rank_InspectionComplete_Commended_Greybeards>{0} looks {1} over and says nothing, which is high praise.</ESCP_Rank_InspectionComplete_Commended_Greybeards>
+    <ESCP_Rank_InspectionComplete_Reprimanded_Greybeards>{0} looks {1} over and sighs.</ESCP_Rank_InspectionComplete_Reprimanded_Greybeards>
+    <ESCP_Rank_PunishmentAssigned_Greybeards>{0} sends {1} to sweep the Seven Thousand Steps.</ESCP_Rank_PunishmentAssigned_Greybeards>
+
+</LanguageData>

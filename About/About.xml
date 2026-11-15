@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <packageId>Rick.ESCP.Greybeards</packageId>
+    <author>Rick</author>
+    <name>ESCP - Greybeards</name>
+    <description>The Elder Scrolls Collaboration Project Presents: The Greybeards, the ancient order of monks who dwell upon the peaks of the Throat of the World. Masters of the Thu'um, the voice of power, the Greybeards have trained in the art of the dragon shout for thousands of years.</description>
+    <url>https://github.com/ElderScrollsCollaborationProject</url>
+    <supportedVersions>
+        <li>1.6</li>
+        <li>1.7</li>
+    </supportedVersions>
+    <modDependencies>
+        <li>
+            <packageId>Rick.ESCP.Core.Tools</packageId>
+            <displayName>ESCP - Tools</displayName>
+            <downloadUrl>https://github.com/ElderScrollsCollaborationProject</downloadUrl>
+        </li>
+        <li>
+            <packageId>Rick.ESCP.Nords</packageId>
+            <displayName>ESCP - Nords</displayName>
+            <downloadUrl>https://github.com/ElderScrollsCollaborationProject</downloadUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>Rick.ESCP.Core.Tools</li>
+        <li>Rick.ESCP.Nords</li>
+    </loadAfter>
+</ModMetaData>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <ESCP_LearnShout>Learn {0}</ESCP_LearnShout>
+    <ESCP_AlreadyKnowsShout>already known</ESCP_AlreadyKnowsShout>
+    <ESCP_NotEnoughDragonSouls>requires {0} Dragon Soul(s)</ESCP_NotEnoughDragonSouls>
+    <ESCP_ShoutLearned>{0} has learned {1}.</ESCP_ShoutLearned>
+    <ESCP_DisarmNoWeapon>{0} is not carrying a weapon.</ESCP_DisarmNoWeapon>
+    <ESCP_Disarmed>Disarmed</ESCP_Disarmed>
+
+</LanguageData>

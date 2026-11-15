@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <QuestScriptDef>
+        <defName>ESCP_Quest_Greybeards_Supplies</defName>
+        <rootSelectionWeight>0.4</rootSelectionWeight>
+        <rootMinPoints>0</rootMinPoints>
+        <defaultChallengeRating>1</defaultChallengeRating>
+        <canGiveRoyalFavor>false</canGiveRoyalFavor>
+        <expireDaysRange>5~10</expireDaysRange>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Supplies for High Hrothgar</li>
+                <li>questName->The Seven Thousand Steps</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <rulesStrings>
+                <li>questDescription->Klimmek of Ivarstead usually hauls supplies up the Seven Thousand Steps to High Hrothgar, but he has hurt his leg and the monks are running low before winter. [asker_nameFull] has sent word asking whether the colony can spare [requiredCount] pemmican.\n\nThe Greybeards keep no gold. In return, [asker_nameDef] has offered to teach [student_nameFull] something of the Way of the Voice.\n\nHave [requiredCount] pemmican in storage within [supplyDays] days.</li>
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap" />
+                <li Class="ESCP.Guilds.QuestNode_GetGuildFactionLeader">
+                    <factionDefName>ESCP_Faction_OrderOfTheGreybeards</factionDefName>
+                    <storeLeaderAs>asker</storeLeaderAs>
+                    <storeFactionAs>greybeards</storeFactionAs>
+                </li>
+                <li Class="ESCP.Guilds.QuestNode_GetColonistWithSkill">
+                    <skill>Melee</skill>
+                    <minLevel>4</minLevel>
+                    <storeAs>student</storeAs>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>requiredCount</name>
+                    <value>$(randInt(8,15)*10)</value>
+                </li>
+                <li Class="QuestNode_Set">
+                    <name>supplyDays</name>
+                    <value>20</value>
+                </li>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_WatchItemCountOnMap">
+                    <map>$map</map>
+                    <itemDef>Pemmican</itemDef>
+                    <requiredCount>$requiredCount</requiredCount>
+                    <outSignalComplete>supplies.Sent</outSignalComplete>
+                </li>
+                <li Class="ESCP.Core.RadiantQuests.QuestNode_GiveTrait">
+                    <inSignal>supplies.Sent</inSignal>
+                    <pawn>$student</pawn>
+                    <trait>ESCP_Trait_WayOfTheVoice</trait>
+                </li>
+                <li Class="QuestNode_Signal">
+                    <inSignal>supplies.Sent</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <letterDef>PositiveEvent</letterDef>
+                                <label>The Way of the Voice</label>
+                                <text>The supplies have gone up the mountain. [student_nameDef] spent a few quiet days among the monks and came back calmer, slower to speak, and with some grasp of the Way of the Voice.</text>
+                                <lookTargets>$student</lookTargets>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Success</outcome>
+                                <goodwillChangeAmount>10</goodwillChangeAmount>
+                                <goodwillChangeFactionOf>$asker</goodwillChangeFactionOf>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+                <li Class="QuestNode_Signal">
+                    <inSignal>student.Killed</inSignal>
+                    <node Class="QuestNode_End">
+                        <outcome>Fail</outcome>
+                        <sendStandardLetter>true</sendStandardLetter>
+                    </node>
+                </li>
+                <li Class="QuestNode_Delay">
+                    <delayTicks>$($supplyDays * 60000)</delayTicks>
+                    <isQuestTimeout>true</isQuestTimeout>
+                    <node Class="QuestNode_End">
+                        <outcome>Fail</outcome>
+                        <sendStandardLetter>true</sendStandardLetter>
+                    </node>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+</Defs>

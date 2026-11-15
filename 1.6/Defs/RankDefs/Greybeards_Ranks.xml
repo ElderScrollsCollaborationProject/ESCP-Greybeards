@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ESCP.Ranks.RankTrackDef>
+        <defName>ESCP_RankTrack_Greybeards</defName>
+        <label>High Hrothgar ranks</label>
+        <rootTier>ESCP_Rank_Greybeards_Pilgrim</rootTier>
+        <owningFaction>ESCP_Faction_OrderOfTheGreybeards</owningFaction>
+        <collectiveNoun>High Hrothgar</collectiveNoun>
+        <drillLabel>Practice the Thu'um</drillLabel>
+        <drillDesc>Train with any colonist. Both stop what they are doing and both gain skill XP. Once per day.</drillDesc>
+        <studyLabel>Meditate on the Words</studyLabel>
+        <studyDesc>Study with another member. Both gain skill XP. Once per day.</studyDesc>
+        <inspectLabel>Look Them Over</inspectLabel>
+        <inspectDesc>Look over a junior member's gear. Good upkeep earns praise and poor upkeep earns a sharp word.</inspectDesc>
+        <punishLabel>Send to Sweep the Steps...</punishLabel>
+        <punishDesc>Set a junior member to tedious labor for a failure, souring their mood. Once per day per member.</punishDesc>
+        <rallyLabel>Be Still and Strong</rallyLabel>
+        <rallyDesc>Call on {0} to fight harder for a short while. Once every few days.</rallyDesc>
+        <fallInLabel>Gather in Silence</fallInLabel>
+        <fallInDesc>Order {0} to gather behind you, up to four deep. They hold position until released.</fallInDesc>
+        <dismissLabel>Return to Meditation</dismissLabel>
+        <dismissDesc>Release {0} so they can return to their duties.</dismissDesc>
+    </ESCP.Ranks.RankTrackDef>
+
+    <ESCP.Ranks.RankTierDef>
+        <defName>ESCP_Rank_Greybeards_Pilgrim</defName>
+        <label>pilgrim</label>
+        <description>Climbed the Seven Thousand Steps and asked to stay.</description>
+        <nextTierOptions>
+            <li>ESCP_Rank_Greybeards_StudentOfTheWay</li>
+        </nextTierOptions>
+    </ESCP.Ranks.RankTierDef>
+
+    <ESCP.Ranks.RankTierDef>
+        <defName>ESCP_Rank_Greybeards_StudentOfTheWay</defName>
+        <label>student of the Way</label>
+        <description>Learns the Way of the Voice through silence and meditation.</description>
+        <minDaysInRank>4</minDaysInRank>
+        <skillRequirements>
+            <Intellectual>5</Intellectual>
+        </skillRequirements>
+        <minMissionsCompleted>1</minMissionsCompleted>
+        <trainingXpPerHour>
+            <Intellectual>400</Intellectual>
+            <Social>200</Social>
+        </trainingXpPerHour>
+        <expedition>ESCP_Expedition_Faction_Novice</expedition>
+        <discipline>Scholarly</discipline>
+        <nextTierOptions>
+            <li>ESCP_Rank_Greybeards_Tongue</li>
+        </nextTierOptions>
+    </ESCP.Ranks.RankTierDef>
+
+    <ESCP.Ranks.RankTierDef>
+        <defName>ESCP_Rank_Greybeards_Tongue</defName>
+        <label>tongue</label>
+        <description>Has begun to understand the Words of Power.</description>
+        <minDaysInRank>9</minDaysInRank>
+        <skillRequirements>
+            <Intellectual>8</Intellectual>
+        </skillRequirements>
+        <minMissionsCompleted>2</minMissionsCompleted>
+        <trainingXpPerHour>
+            <Intellectual>500</Intellectual>
+            <Social>250</Social>
+        </trainingXpPerHour>
+        <expedition>ESCP_Expedition_Faction_Novice</expedition>
+        <discipline>Scholarly</discipline>
+        <nextTierOptions>
+            <li>ESCP_Rank_Greybeards_MasterOfTheVoice</li>
+        </nextTierOptions>
+    </ESCP.Ranks.RankTierDef>
+
+    <ESCP.Ranks.RankTierDef>
+        <defName>ESCP_Rank_Greybeards_MasterOfTheVoice</defName>
+        <label>master of the Voice</label>
+        <description>Speaks the Thu'um with wisdom and restraint.</description>
+        <minDaysInRank>14</minDaysInRank>
+        <skillRequirements>
+            <Intellectual>11</Intellectual>
+        </skillRequirements>
+        <minMissionsCompleted>4</minMissionsCompleted>
+        <trainingXpPerHour>
+            <Intellectual>600</Intellectual>
+            <Social>300</Social>
+        </trainingXpPerHour>
+        <expedition>ESCP_Expedition_Faction_Veteran</expedition>
+        <discipline>Scholarly</discipline>
+        <nextTierOptions>
+            <li>ESCP_Rank_Greybeards_ElderOfHighHrothgar</li>
+        </nextTierOptions>
+    </ESCP.Ranks.RankTierDef>
+
+    <ESCP.Ranks.RankTierDef>
+        <defName>ESCP_Rank_Greybeards_ElderOfHighHrothgar</defName>
+        <label>elder of High Hrothgar</label>
+        <description>Among the eldest of the Greybeards, whose whisper shakes the mountain.</description>
+        <minDaysInRank>20</minDaysInRank>
+        <skillRequirements>
+            <Intellectual>14</Intellectual>
+        </skillRequirements>
+        <minMissionsCompleted>6</minMissionsCompleted>
+        <trainingXpPerHour>
+            <Intellectual>700</Intellectual>
+            <Social>350</Social>
+        </trainingXpPerHour>
+        <expedition>ESCP_Expedition_Faction_Veteran</expedition>
+        <discipline>Scholarly</discipline>
+    </ESCP.Ranks.RankTierDef>
+
+</Defs>

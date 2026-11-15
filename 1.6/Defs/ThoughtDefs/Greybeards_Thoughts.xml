@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>ESCP_Opinion_Dragonborn</defName>
+        <thoughtClass>Thought_SituationalSocial</thoughtClass>
+        <workerClass>ESCP_RaceTools.ThoughtWorker_UniversalTraitOpinion</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <modExtensions>
+            <li Class="ESCP_RaceTools.ThoughtDefProperties">
+                <traitA>ESCP_Trait_WayOfTheVoice</traitA>
+                <traitB>ESCP_Trait_Dragonborn</traitB>
+            </li>
+        </modExtensions>
+        <stages>
+            <li>
+                <label>Dragonborn and student of the Voice</label>
+                <baseOpinionOffset>15</baseOpinionOffset>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>ESCP_Building_WordWall_FusRoDah</defName>
+        <label>word wall (Fus Ro Dah)</label>
+        <description>An ancient stone wall carved with the dragon words FUS RO DAH: Unrelenting Force. A pawn with the Thu'um Voice gene can meditate before this wall, spending a Dragon Soul to learn the shout.</description>
+        <thingClass>Building</thingClass>
+        <graphicData>
+            <texPath>Things/Building/WordWall/ESCP_WordWall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <color>(160,140,100)</color>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>0.5</fillPercent>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Mass>100</Mass>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <BlocksGranite>25</BlocksGranite>
+        </costList>
+        <designationCategory>Structure</designationCategory>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <hasInteractionCell>true</hasInteractionCell>
+        <comps>
+            <li Class="ESCP.Core.Thuum.CompProperties_WordWall" />
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Thuum.WordWallExtension">
+                <shouts>
+                    <li>
+                        <abilityDef>ESCP_Ability_FusRoDah</abilityDef>
+                        <dragonSoulCost>1</dragonSoulCost>
+                        <learnTicks>3000</learnTicks>
+                    </li>
+                </shouts>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>ESCP_Building_WordWall_YolToorShul</defName>
+        <label>word wall (Yol Toor Shul)</label>
+        <description>An ancient stone wall carved with the dragon words YOL TOOR SHUL: Fire Breath. A pawn with the Thu'um Voice gene can meditate before this wall, spending a Dragon Soul to learn the shout.</description>
+        <thingClass>Building</thingClass>
+        <graphicData>
+            <texPath>Things/Building/WordWall/ESCP_WordWall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <color>(200,80,40)</color>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>0.5</fillPercent>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Mass>100</Mass>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <BlocksGranite>25</BlocksGranite>
+        </costList>
+        <designationCategory>Structure</designationCategory>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <hasInteractionCell>true</hasInteractionCell>
+        <comps>
+            <li Class="ESCP.Core.Thuum.CompProperties_WordWall" />
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Thuum.WordWallExtension">
+                <shouts>
+                    <li>
+                        <abilityDef>ESCP_Ability_YolToorShul</abilityDef>
+                        <dragonSoulCost>1</dragonSoulCost>
+                        <learnTicks>3000</learnTicks>
+                    </li>
+                </shouts>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>ESCP_Building_WordWall_WuldNahKest</defName>
+        <label>word wall (Wuld Nah Kest)</label>
+        <description>An ancient stone wall carved with the dragon words WULD NAH KEST: Whirlwind Sprint. A pawn with the Thu'um Voice gene can meditate before this wall, spending a Dragon Soul to learn the shout.</description>
+        <thingClass>Building</thingClass>
+        <graphicData>
+            <texPath>Things/Building/WordWall/ESCP_WordWall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <color>(140,180,220)</color>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>0.5</fillPercent>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Mass>100</Mass>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <BlocksGranite>25</BlocksGranite>
+        </costList>
+        <designationCategory>Structure</designationCategory>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <hasInteractionCell>true</hasInteractionCell>
+        <comps>
+            <li Class="ESCP.Core.Thuum.CompProperties_WordWall" />
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Thuum.WordWallExtension">
+                <shouts>
+                    <li>
+                        <abilityDef>ESCP_Ability_WuldNahKest</abilityDef>
+                        <dragonSoulCost>1</dragonSoulCost>
+                        <learnTicks>3000</learnTicks>
+                    </li>
+                </shouts>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>ESCP_Building_WordWall_KriiLunAus</defName>
+        <label>word wall (Krii Lun Aus)</label>
+        <description>An ancient stone wall carved with the dragon words KRII LUN AUS: Marked for Death. A pawn with the Thu'um Voice gene can meditate before this wall, spending a Dragon Soul to learn the shout.</description>
+        <thingClass>Building</thingClass>
+        <graphicData>
+            <texPath>Things/Building/WordWall/ESCP_WordWall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <color>(80,40,100)</color>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>0.5</fillPercent>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Mass>100</Mass>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <BlocksGranite>25</BlocksGranite>
+        </costList>
+        <designationCategory>Structure</designationCategory>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <hasInteractionCell>true</hasInteractionCell>
+        <comps>
+            <li Class="ESCP.Core.Thuum.CompProperties_WordWall" />
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Thuum.WordWallExtension">
+                <shouts>
+                    <li>
+                        <abilityDef>ESCP_Ability_KriiLunAus</abilityDef>
+                        <dragonSoulCost>1</dragonSoulCost>
+                        <learnTicks>3000</learnTicks>
+                    </li>
+                </shouts>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>ESCP_Building_WordWall_LizSlenNus</defName>
+        <label>word wall (Liz Slen Nus)</label>
+        <description>An ancient stone wall carved with the dragon words LIZ SLEN NUS: Ice Form. A pawn with the Thu'um Voice gene can meditate before this wall, spending a Dragon Soul to learn the shout.</description>
+        <thingClass>Building</thingClass>
+        <graphicData>
+            <texPath>Things/Building/WordWall/ESCP_WordWall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <color>(120,200,240)</color>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>0.5</fillPercent>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Mass>100</Mass>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <BlocksGranite>25</BlocksGranite>
+        </costList>
+        <designationCategory>Structure</designationCategory>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <hasInteractionCell>true</hasInteractionCell>
+        <comps>
+            <li Class="ESCP.Core.Thuum.CompProperties_WordWall" />
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Thuum.WordWallExtension">
+                <shouts>
+                    <li>
+                        <abilityDef>ESCP_Ability_LizSlenNus</abilityDef>
+                        <dragonSoulCost>1</dragonSoulCost>
+                        <learnTicks>3000</learnTicks>
+                    </li>
+                </shouts>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>ESCP_Building_WordWall_LaasYahNir</defName>
+        <label>word wall (Laas Yah Nir)</label>
+        <description>An ancient stone wall carved with the dragon words LAAS YAH NIR: Aura Whisper. A pawn with the Thu'um Voice gene can meditate before this wall, spending a Dragon Soul to learn the shout.</description>
+        <thingClass>Building</thingClass>
+        <graphicData>
+            <texPath>Things/Building/WordWall/ESCP_WordWall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <color>(180,220,140)</color>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>0.5</fillPercent>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Mass>100</Mass>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <BlocksGranite>25</BlocksGranite>
+        </costList>
+        <designationCategory>Structure</designationCategory>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <hasInteractionCell>true</hasInteractionCell>
+        <comps>
+            <li Class="ESCP.Core.Thuum.CompProperties_WordWall" />
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Thuum.WordWallExtension">
+                <shouts>
+                    <li>
+                        <abilityDef>ESCP_Ability_LaasYahNir</abilityDef>
+                        <dragonSoulCost>1</dragonSoulCost>
+                        <learnTicks>3000</learnTicks>
+                    </li>
+                </shouts>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>ESCP_Building_WordWall_JoorZahFrul</defName>
+        <label>word wall (Joor Zah Frul)</label>
+        <description>An ancient stone wall carved with the dragon words JOOR ZAH FRUL: Dragonrend. A pawn with the Thu'um Voice gene can meditate before this wall, spending a Dragon Soul to learn the shout.</description>
+        <thingClass>Building</thingClass>
+        <graphicData>
+            <texPath>Things/Building/WordWall/ESCP_WordWall</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <color>(160,140,100)</color>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>0.5</fillPercent>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Mass>100</Mass>
+        </statBases>
+        <size>(2,1)</size>
+        <costList>
+            <BlocksGranite>25</BlocksGranite>
+        </costList>
+        <designationCategory>Structure</designationCategory>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <hasInteractionCell>true</hasInteractionCell>
+        <comps>
+            <li Class="ESCP.Core.Thuum.CompProperties_WordWall" />
+        </comps>
+        <modExtensions>
+            <li Class="ESCP.Core.Thuum.WordWallExtension">
+                <shouts>
+                    <li>
+                        <abilityDef>ESCP_Ability_JoorZahFrul</abilityDef>
+                        <dragonSoulCost>1</dragonSoulCost>
+                        <learnTicks>3000</learnTicks>
+                    </li>
+                </shouts>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

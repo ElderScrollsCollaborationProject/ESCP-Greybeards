@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <AbilityGroupDef>
+        <defName>ESCP_DragonShouts</defName>
+        <cooldownTicks>600</cooldownTicks>
+    </AbilityGroupDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_FusRoDah</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Unrelenting Force</label>
+        <description>Unrelenting Force the first and most iconic shout of the Greybeards. Three words of power released as a concentrated shockwave of the Voice that sends enemies flying. Even partial mastery of these three words can hurl an armed warrior across a courtyard. FUS RO DAH.</description>
+        <iconPath>UI/Abilities/BulletShield</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>true</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1800</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_FusRoDah</warmupStartSound>
+        <verbProperties>
+            <verbClass>ESCP.Core.Thuum.Verb_FusRoDah</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>16</range>
+            <warmupTime>1.5</warmupTime>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+                <canTargetMechs>true</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <modExtensions>
+            <li Class="ESCP.Core.Thuum.FusRoDahExtension">
+                <coneRange>16</coneRange>
+                <coneHalfArc>55</coneHalfArc>
+                <baseDamage>25</baseDamage>
+                <knockbackCells>6</knockbackCells>
+                <ticksPerStep>8</ticksPerStep>
+            </li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_YolToorShul</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Fire Breath</label>
+        <description>Fire Breath the ancient dragon words of fire taught to mortals by Paarthurnax himself. The shout draws on the dragonfire that flows through all living things and channels it into a roaring stream of flame. YOL TOOR SHUL.</description>
+        <iconPath>UI/Abilities/FireSpew</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <hostile>true</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <warmupStartSound>ESCP_Sound_FireBreath</warmupStartSound>
+        <cooldownTicksRange>3000</cooldownTicksRange>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>9</range>
+            <warmupTime>1.5</warmupTime>
+            <soundCast>FireSpew_Resolve</soundCast>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+            <flammabilityAttachFireChanceCurve>
+                <points>
+                    <li>(0.2, 0)</li>
+                    <li>(1, 1)</li>
+                </points>
+            </flammabilityAttachFireChanceCurve>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityFireSpew">
+                <range>12</range>
+                <lineWidthEnd>3.5</lineWidthEnd>
+                <filthDef>Filth_FlammableBile</filthDef>
+                <effecterDef>Fire_Spew</effecterDef>
+                <canHitFilledCells>true</canHitFilledCells>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_WuldNahKest</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Whirlwind Sprint</label>
+        <description>Whirlwind Sprint become the wind itself. The shout calls on the essence of movement and allows the user to sprint with supernatural speed across the battlefield, covering distance in instants and eluding everything in their path. WULD NAH KEST.</description>
+        <iconPath>UI/Abilities/Longjump</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>false</hostile>
+        <targetRequired>false</targetRequired>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1200</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_WhirlwindSprint</warmupStartSound>
+        <statBases>
+            <Ability_Duration>3</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <warmupTime>0.5</warmupTime>
+            <range>0</range>
+            <targetable>false</targetable>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_WhirlwindSprint</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_KriiLunAus</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Marked for Death</label>
+        <description>Marked for Death words of power that unravel the vitality of the target, stripping their defenses and wasting their strength. A soldier touched by this shout fights as though their armor is paper and their body already halfway to the grave. KRII LUN AUS.</description>
+        <iconPath>UI/Abilities/Burden</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>true</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>2400</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_MarkedForDeath</warmupStartSound>
+        <statBases>
+            <Ability_Duration>30</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>16</range>
+            <warmupTime>1.5</warmupTime>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+                <canTargetMechs>true</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_MarkedForDeath</hediffDef>
+                <goodwillImpact>-15</goodwillImpact>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_LizSlenNus</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Ice Form</label>
+        <description>Ice Form words of frost and cold that encase the target in a shell of ice, locking them in place and draining the warmth from their body and will. The target stands frozen and helpless until the ice shatters and the words release their grip. LIZ SLEN NUS.</description>
+        <iconPath>UI/Abilities/Stun</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>true</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>2400</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_IceForm</warmupStartSound>
+        <statBases>
+            <Ability_Duration>8</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>14</range>
+            <warmupTime>1.5</warmupTime>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_IceForm</hediffDef>
+                <goodwillImpact>-15</goodwillImpact>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_LaasYahNir</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Aura Whisper</label>
+        <description>Aura Whisper heighten your senses beyond mortal limits. The words of this shout thin the veil between flesh and soul, allowing the user to perceive the life force of all living things nearby and react to threats before they can strike. LAAS YAH NIR.</description>
+        <iconPath>UI/Abilities/Focus</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>false</hostile>
+        <targetRequired>false</targetRequired>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1800</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_AuraWhisper</warmupStartSound>
+        <statBases>
+            <Ability_Duration>15</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <warmupTime>0.5</warmupTime>
+            <range>0</range>
+            <targetable>false</targetable>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_AuraWhisper</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_JoorZahFrul</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Dragonrend</label>
+        <description>Dragonrend the concept of mortality itself forged into a weapon of the Voice. This shout deals psychic damage and forces even the most powerful enemies to submit to mortal limitations, disrupting their focus and breaking their will to fight. JOOR ZAH FRUL.</description>
+        <iconPath>UI/Abilities/NauseaPulse</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>true</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>3000</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_Dragonrend</warmupStartSound>
+        <statBases>
+            <Ability_Duration>10</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <range>18</range>
+            <warmupTime>2.0</warmupTime>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+                <canTargetMechs>true</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_Dragonrend</hediffDef>
+                <goodwillImpact>-15</goodwillImpact>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_RaanMirTah</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Animal Allegiance</label>
+        <description>Animal Allegiance the words of kinship spoken to the wild. The shout reaches into the primal mind of all beasts nearby, calming aggression and sharpening the bond between beast and master. RAAN MIR TAH.</description>
+        <iconPath>UI/Abilities/AnimalCalm</iconPath>
+        <aiCanUse>false</aiCanUse>
+        <hostile>false</hostile>
+        <targetRequired>false</targetRequired>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>2400</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_AnimalAllegiance</warmupStartSound>
+        <statBases>
+            <Ability_Duration>30</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <warmupTime>1.5</warmupTime>
+            <range>0</range>
+            <targetable>false</targetable>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_AnimalAllegiance</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_MidVurShaan</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Battle Fury</label>
+        <description>Battle Fury the shout of a warrior's last breath. These words of speed and violence drive allies into a state of heightened aggression, multiplying the pace and force of every blow. MID VUR SHAAN.</description>
+        <iconPath>UI/Abilities/Berserk</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>false</hostile>
+        <targetRequired>false</targetRequired>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1800</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_BattleFury</warmupStartSound>
+        <statBases>
+            <Ability_Duration>15</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <warmupTime>1.0</warmupTime>
+            <range>0</range>
+            <targetable>false</targetable>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_BattleFury</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_FeimZiiGron</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Become Ethereal</label>
+        <description>Become Ethereal the shout of the spirit unbound. The words dissolve the caster's physical form into something untouchable, passing all incoming harm harmlessly through flesh that is no longer entirely there. FEIM ZII GRON.</description>
+        <iconPath>UI/Abilities/Invisibility</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>false</hostile>
+        <targetRequired>false</targetRequired>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>3600</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_BecomeEthereal</warmupStartSound>
+        <statBases>
+            <Ability_Duration>8</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <warmupTime>0.5</warmupTime>
+            <range>0</range>
+            <targetable>false</targetable>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_BecomeEthereal</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_GolHahDov</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Bend Will</label>
+        <description>Bend Will the Voice as absolute dominion. The words shatter the target's will entirely, reducing even a warrior to a barely-functioning shell stripped of agency and capability. GOL HAH DOV.</description>
+        <iconPath>UI/Abilities/Convert</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>true</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>3600</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_BendWill</warmupStartSound>
+        <statBases>
+            <Ability_Duration>30</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <warmupTime>2.0</warmupTime>
+            <range>16</range>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_BendWill</hediffDef>
+                <goodwillImpact>-25</goodwillImpact>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_OdAhViing</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Call Dragon</label>
+        <description>Call Dragon the summons of Od Ah Viing, the great dragon bound to the Dovahkiin's service. The shout calls him from wherever he roams and he descends upon the target with devastating power. OD AH VIING.</description>
+        <iconPath>UI/Abilities/FireBurst</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>true</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>6000</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_CallDragon</warmupStartSound>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <warmupTime>2.5</warmupTime>
+            <range>24</range>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+                <canTargetPawns>false</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityExplosion">
+                <damageDef>Bomb</damageDef>
+                <explosionRadius>5.9</explosionRadius>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_HunKaalZoor</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Call of Valor</label>
+        <description>Call of Valor the shout that summons the spirits of ancient Nord heroes. The echoing words infuse the caster with the combined might and discipline of warriors who shaped the age of legends. HUN KAAL ZOOR.</description>
+        <iconPath>UI/Abilities/WordOfInspiration</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>false</hostile>
+        <targetRequired>false</targetRequired>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>3600</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_CallOfValor</warmupStartSound>
+        <statBases>
+            <Ability_Duration>30</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <warmupTime>1.5</warmupTime>
+            <range>0</range>
+            <targetable>false</targetable>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_CallOfValor</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_VenMulRiik</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Cyclone</label>
+        <description>Cyclone a shout of wind and storm that bursts outward in all directions at once. Those near the caster are hurled away by the expanding vortex with bone-crushing force. VEN MUL RIIK.</description>
+        <iconPath>UI/Abilities/BerserkPulse</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>true</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>2400</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_Cyclone</warmupStartSound>
+        <verbProperties>
+            <verbClass>ESCP.Core.Thuum.Verb_FusRoDah</verbClass>
+            <requireLineOfSight>false</requireLineOfSight>
+            <range>8</range>
+            <warmupTime>1.5</warmupTime>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+                <canTargetMechs>true</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <modExtensions>
+            <li Class="ESCP.Core.Thuum.FusRoDahExtension">
+                <coneRange>8</coneRange>
+                <coneHalfArc>180</coneHalfArc>
+                <baseDamage>18</baseDamage>
+                <knockbackCells>4</knockbackCells>
+                <ticksPerStep>8</ticksPerStep>
+            </li>
+        </modExtensions>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_ZunHaalViik</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Disarm</label>
+        <description>Disarm the shout that speaks to steel and severs the bond between warrior and weapon. The target's grip fails completely, leaving them nearly helpless in melee and unable to aim true. ZUN HAAL VIIK.</description>
+        <iconPath>UI/Abilities/BlindingPulse</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>true</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1800</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_Disarm</warmupStartSound>
+        <statBases>
+            <Ability_Duration>8</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <warmupTime>1.0</warmupTime>
+            <range>14</range>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>false</canTargetAnimals>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="ESCP.Core.Magic.CompProperties_AbilityDisarm" />
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_Disarm</hediffDef>
+                <goodwillImpact>-10</goodwillImpact>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_FaasRuMaar</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Dismay</label>
+        <description>Dismay the words of dread and terror, spoken directly into the soul. The shout unmakes the courage of its target entirely, sending them fleeing from the battlefield in blind panic. FAAS RU MAAR.</description>
+        <iconPath>UI/Abilities/VoidTerror</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>true</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1800</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_Dismay</warmupStartSound>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <warmupTime>1.5</warmupTime>
+            <range>16</range>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveMentalState">
+                <compClass>CompAbilityEffect_GiveMentalState</compClass>
+                <stateDef>PanicFlee</stateDef>
+                <goodwillImpact>-15</goodwillImpact>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_MulQahDiiv</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Dragon Aspect</label>
+        <description>Dragon Aspect the shout of the dragon's own essence. The words channel the ancient power of dragonkind directly, granting the caster tremendous fortitude, speed, and command over the battlefield. MUL QAH DIIV.</description>
+        <iconPath>UI/Abilities/BerserkTrance</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>false</hostile>
+        <targetRequired>false</targetRequired>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>6000</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_DragonAspect</warmupStartSound>
+        <statBases>
+            <Ability_Duration>60</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <warmupTime>2.0</warmupTime>
+            <range>0</range>
+            <targetable>false</targetable>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_DragonAspect</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_SuGrahDun</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Elemental Fury</label>
+        <description>Elemental Fury the speed of wind and lightning drawn into weapons. The shout divides a moment into fractions and pours them back into the fighter's weapon arm, producing a flurry of attacks too fast to follow. SU GRAH DUN.</description>
+        <iconPath>UI/Abilities/WorkDrive</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>false</hostile>
+        <targetRequired>false</targetRequired>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1800</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_ElementalFury</warmupStartSound>
+        <statBases>
+            <Ability_Duration>15</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <warmupTime>0.5</warmupTime>
+            <range>0</range>
+            <targetable>false</targetable>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_ElementalFury</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_FoKrahDiin</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Frost Breath</label>
+        <description>Frost Breath dragon breath spoken in the language of cold. The shout condenses the essence of winter into a blast that freezes flesh, slows movement, and saps the will to fight. FO KRAH DIIN.</description>
+        <iconPath>UI/Abilities/EntropyDump</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>true</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>2400</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_FrostBreath</warmupStartSound>
+        <statBases>
+            <Ability_Duration>10</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <warmupTime>1.5</warmupTime>
+            <range>12</range>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_FrostBreath</hediffDef>
+                <goodwillImpact>-15</goodwillImpact>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_KaanDremOv</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Kyne's Peace</label>
+        <description>Kyne's Peace the goddess's blessing spoken aloud. The shout reaches into the mind of a creature or person in the grip of rage or madness, unravelling the mental break that drives them. KAAN DREM OV.</description>
+        <iconPath>UI/Abilities/WordOfSerenity</iconPath>
+        <aiCanUse>false</aiCanUse>
+        <hostile>false</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1800</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_KynesPeace</warmupStartSound>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <warmupTime>1.5</warmupTime>
+            <range>20</range>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityStopMentalState">
+                <psyfocusCostForMinor>0</psyfocusCostForMinor>
+                <psyfocusCostForMajor>0</psyfocusCostForMajor>
+                <psyfocusCostForExtreme>0</psyfocusCostForExtreme>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_TiidKloUl</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Slow Time</label>
+        <description>Slow Time the shout that makes time itself yield. A few syllables stretch the moment wide enough to think, react, and strike before any opponent can match the pace. TIID KLO UL.</description>
+        <iconPath>UI/Abilities/Skip</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>false</hostile>
+        <targetRequired>false</targetRequired>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>3000</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_SlowTime</warmupStartSound>
+        <statBases>
+            <Ability_Duration>8</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <warmupTime>0.5</warmupTime>
+            <range>0</range>
+            <targetable>false</targetable>
+            <targetParams>
+                <canTargetSelf>True</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveHediff">
+                <compClass>CompAbilityEffect_GiveHediff</compClass>
+                <hediffDef>ESCP_Hediff_Shout_SlowTime</hediffDef>
+                <onlyApplyToSelf>True</onlyApplyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_StrunBahQo</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Storm Call</label>
+        <description>Storm Call the greatest act of weather conjuring known to the Thu'um. The words rip open the sky above a chosen site and call down lightning from the void until the area is salted with thunder and nothing moves within it. STRUN BAH QO.</description>
+        <iconPath>UI/Abilities/Flashstorm</iconPath>
+        <aiCanUse>true</aiCanUse>
+        <hostile>true</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>6000</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_StormCall</warmupStartSound>
+        <statBases>
+            <Ability_EffectRadius>8.9</Ability_EffectRadius>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <warmupTime>2.5</warmupTime>
+            <range>30</range>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+                <canTargetPawns>false</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityFlashstorm">
+                <goodwillImpact>-35</goodwillImpact>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ESCP_Ability_ZulMeyGut</defName>
+        <groupDef>ESCP_DragonShouts</groupDef>
+        <label>Throw Voice</label>
+        <description>Throw Voice the art of the Voice turned inward and projected outward as deception. The shout sends the target's senses on an errand, leaving them wandering in confusion as the speaker moves freely. ZUL MEY GUT.</description>
+        <iconPath>UI/Abilities/Beckon</iconPath>
+        <aiCanUse>false</aiCanUse>
+        <hostile>true</hostile>
+        <showOnCharacterCard>true</showOnCharacterCard>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <cooldownTicksRange>1200</cooldownTicksRange>
+        <warmupStartSound>ESCP_Sound_ThrowVoice</warmupStartSound>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <requireLineOfSight>true</requireLineOfSight>
+            <warmupTime>0.5</warmupTime>
+            <range>20</range>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetAnimals>true</canTargetAnimals>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityGiveMentalState">
+                <compClass>CompAbilityEffect_GiveMentalState</compClass>
+                <stateDef>WanderConfused</stateDef>
+                <goodwillImpact>-10</goodwillImpact>
+            </li>
+        </comps>
+    </AbilityDef>
+
+</Defs>

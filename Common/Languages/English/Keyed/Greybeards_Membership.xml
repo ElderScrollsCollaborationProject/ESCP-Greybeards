@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <ESCP_Greybeards_Enlist_Letter_Title>Students of the Way</ESCP_Greybeards_Enlist_Letter_Title>
+    <ESCP_Greybeards_Enlist_Letter_Label>The Greybeards have agreed to teach the colony's people. There is no pay and the stairs are long, but the monks are patient.</ESCP_Greybeards_Enlist_Letter_Label>
+    <ESCP_Greybeards_Enlist_Button_Label>Study at High Hrothgar</ESCP_Greybeards_Enlist_Button_Label>
+    <ESCP_Greybeards_Enlist_Button_Desc>Ask the Greybeards to take your people in as students of the Way of the Voice.</ESCP_Greybeards_Enlist_Button_Desc>
+    <ESCP_Greybeards_Enlist_Requrements_Not_Satisfied>Arngeir does not think you are ready. Standing: {0}.</ESCP_Greybeards_Enlist_Requrements_Not_Satisfied>
+    <ESCP_Greybeards_Enlisted_To_Hostile_Faction>The Greybeards will not teach those who bring violence to their door.</ESCP_Greybeards_Enlisted_To_Hostile_Faction>
+    <ESCP_Greybeards_Enlisted_With_Key>Students of the Way of the Voice</ESCP_Greybeards_Enlisted_With_Key>
+    <ESCP_Greybeards_Missions_Label>Tasks for the monks</ESCP_Greybeards_Missions_Label>
+    <ESCP_Greybeards_Missions_Desc>See what the Greybeards need.</ESCP_Greybeards_Missions_Desc>
+    <ESCP_Greybeards_Menu_Missions_Desc>Small tasks for High Hrothgar. The monks have little to give, but they give it.</ESCP_Greybeards_Menu_Missions_Desc>
+    <ESCP_Greybeards_Menu_Missions_Select_Quest>Select a job</ESCP_Greybeards_Menu_Missions_Select_Quest>
+    <ESCP_Greybeards_Menu_Missions_Start_Quest>Accept</ESCP_Greybeards_Menu_Missions_Start_Quest>
+    <ESCP_Greybeards_Menu_Missions_Collect_Bounty>Collect</ESCP_Greybeards_Menu_Missions_Collect_Bounty>
+    <ESCP_Greybeards_Provisions_Label>Share the monks' food</ESCP_Greybeards_Provisions_Label>
+    <ESCP_Greybeards_Provisions_Desc>Plain food carried up the Seven Thousand Steps.</ESCP_Greybeards_Provisions_Desc>
+    <ESCP_Greybeards_Storage_Label>Monastery storeroom</ESCP_Greybeards_Storage_Label>
+    <ESCP_Greybeards_Storage_Desc>Leave goods at High Hrothgar.</ESCP_Greybeards_Storage_Desc>
+    <ESCP_Greybeards_Resign_Menu_Text>Leave the Greybeards? They will understand.</ESCP_Greybeards_Resign_Menu_Text>
+    <ESCP_Greybeards_Resign_Letter_Title>Left High Hrothgar</ESCP_Greybeards_Resign_Letter_Title>
+    <ESCP_Greybeards_Resign_Letter_Label>The colony has stopped studying with the Greybeards.</ESCP_Greybeards_Resign_Letter_Label>
+    <ESCP_Greybeards_Resign_Button_Label>Stop studying</ESCP_Greybeards_Resign_Button_Label>
+    <ESCP_Greybeards_Resign_Button_Desc>End your studies at High Hrothgar.</ESCP_Greybeards_Resign_Button_Desc>
+    <ESCP_Greybeards_Kick_Out_Letter_Title>Turned away by the Greybeards</ESCP_Greybeards_Kick_Out_Letter_Title>
+    <ESCP_Greybeards_Kick_Out_Label_Title>The Greybeards have closed their door to the colony.</ESCP_Greybeards_Kick_Out_Label_Title>
+    <ESCP_Greybeards_Work_0_Label>Meditate on the Words</ESCP_Greybeards_Work_0_Label>
+    <ESCP_Greybeards_Work_0_Desc>Sit in silence with the monks and contemplate the Words of Power.</ESCP_Greybeards_Work_0_Desc>
+    <ESCP_Greybeards_Work_1_Label>Carry supplies up the steps</ESCP_Greybeards_Work_1_Label>
+    <ESCP_Greybeards_Work_1_Desc>Haul food and firewood up the Seven Thousand Steps.</ESCP_Greybeards_Work_1_Desc>
+
+</LanguageData>

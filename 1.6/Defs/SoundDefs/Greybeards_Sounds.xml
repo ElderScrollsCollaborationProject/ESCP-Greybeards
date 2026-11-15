@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <SoundDef>
+        <defName>ESCP_Sound_AnimalAllegiance</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Animal_Allegiance</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_AuraWhisper</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Aura_Whisper</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_BattleFury</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Battle_Fury</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_BecomeEthereal</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Become_Ethereal</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_BendWill</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Bend_Will</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_CallDragon</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Call_Dragon</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_CallOfValor</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Call_Of_Valor</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_Cyclone</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Cyclone</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_Disarm</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Disarm</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_Dismay</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Dismay</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_DragonAspect</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Dragon_Aspect</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_Dragonrend</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Dragonrend</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_ElementalFury</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Elemental_Fury</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_FireBreath</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Fire_Breath</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_FrostBreath</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Frost_Breath</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_FusRoDah</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Unrelenting_Force</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_IceForm</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Ice_Form</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_KynesPeace</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Kynes_Peace</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_MarkedForDeath</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Marked_For_Death</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_SlowTime</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Slow_Time</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_StormCall</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Storm_Call</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_ThrowVoice</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Throw_Voice</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>ESCP_Sound_WhirlwindSprint</defName>
+        <context>MapOnly</context>
+        <subSounds>
+            <li>
+                <grains><li Class="AudioGrain_Clip"><clipPath>Shouts/ESCP_Whirlwind_Sprint</clipPath></li></grains>
+                <volumeRange>90~90</volumeRange>
+                <pitchRange>1~1</pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+</Defs>

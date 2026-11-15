@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <TraitDef>
+        <defName>ESCP_Trait_WayOfTheVoice</defName>
+        <commonality>0</commonality>
+        <degreeDatas>
+            <li>
+                <label>Way of the Voice</label>
+                <description>This pawn has studied the Way of the Voice, the monastic discipline of the Greybeards at High Hrothgar. Years of silence, contemplation, and careful training in the Thu'um have produced a steadiness of mind and a patience that few people can match. They are not easily unsettled and they do not speak carelessly.</description>
+                <statOffsets>
+                    <MentalBreakThreshold>-0.06</MentalBreakThreshold>
+                    <NegotiationAbility>0.06</NegotiationAbility>
+                    <MeditationFocusGain>0.15</MeditationFocusGain>
+                </statOffsets>
+                <skillGains>
+                    <Melee>1</Melee>
+                </skillGains>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+    <TraitDef>
+        <defName>ESCP_Trait_Dragonborn</defName>
+        <commonality>0</commonality>
+        <degreeDatas>
+            <li>
+                <label>Dragonborn</label>
+                <description>This pawn carries the rare gift, or burden, of a dragon's soul in mortal flesh. The Dragonborn can absorb the knowledge and power of slain dragons directly and wield the Thu'um with a mastery that even the Greybeards cannot fully explain. Their shouts come more naturally and heal from the act of using them rather than being diminished by it. There have been very few in recorded history.</description>
+                <statOffsets>
+                    <MeleeHitChance>0.06</MeleeHitChance>
+                    <IncomingDamageFactor>-0.08</IncomingDamageFactor>
+                    <PainShockThreshold>0.06</PainShockThreshold>
+                    <MeditationFocusGain>0.20</MeditationFocusGain>
+                </statOffsets>
+                <skillGains>
+                    <Melee>2</Melee>
+                    <Shooting>1</Shooting>
+                </skillGains>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+</Defs>

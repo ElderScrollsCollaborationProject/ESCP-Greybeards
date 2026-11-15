@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <FactionDef ParentName="FactionBase">
+        <defName>ESCP_Faction_OrderOfTheGreybeards</defName>
+        <label>Order of the Greybeards</label>
+        <description>The Greybeards are an ancient order of monks who have dwelt in High Hrothgar (a monastery perched on the slopes of the Throat of the World, the highest peak in Tamriel) for more than three thousand years. They are devoted to silence, contemplation, and the mastery of the Thu'um, the Voice of the dragon. Their shouts carry such power that casual speech risks shattering the world around them; the most learned among them spend centuries in wordless meditation before trusting themselves to speak. The Greybeards do not wage war, do not pursue wealth, and do not seek influence over the affairs of kingdoms. They watch, they teach, and they wait. The last time they all shouted together, the sound shook the mountains for miles. That was a long time ago. They have been very careful since.</description>
+        <colorSpectrum>
+            <li>(0.55, 0.50, 0.45)</li>
+        </colorSpectrum>
+        <maxConfigurableAtWorldCreation>0</maxConfigurableAtWorldCreation>
+        <pawnSingular>Greybeard</pawnSingular>
+        <pawnsPlural>Greybeards</pawnsPlural>
+        <categoryTag>Outlander</categoryTag>
+        <settlementGenerationWeight>0</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <canSiege>false</canSiege>
+        <canStageAttacks>false</canStageAttacks>
+        <leaderTitle>Master of the Voice</leaderTitle>
+        <factionIconPath>World/WorldObjects/Expanding/Empire</factionIconPath>
+        <techLevel>Medieval</techLevel>
+        <fixedName>Order of the Greybeards</fixedName>
+        <allowedCultures>
+            <li>ESCP_Culture_Nord</li>
+        </allowedCultures>
+
+        <fixedIdeo>true</fixedIdeo>
+        <ideoName>The Way of the Voice</ideoName>
+        <ideoDescription>The Greybeards hold that the Thu'um is the sacred language of Akatosh, dragon god of time and chief of the Divines, and that to speak it is to commune with the divine order of creation. Their philosophy teaches that all things have a voice, and that voice is the essence of existence itself. Mastery of the Thu'um is therefore not a means to power but an act of profound humility: one must understand what they are saying, not merely how to say it. The Greybeards teach that the Voice speaks truth; that a wrongly-used shout lies to the world, and the world will answer. Novices study silence for years before they are trusted with a single word.</ideoDescription>
+        <deityPresets>
+            <li>
+                <nameType><name>Akatosh</name><type>Dragon God of Time, patron of the Thu'um and architect of the world's voice</type></nameType>
+                <gender>Male</gender>
+                <iconPath>UI/Deities/ESCP_DeityAkatosh</iconPath>
+            </li>
+            <li>
+                <nameType><name>Kynareth</name><type>goddess of air, wind, and sky. Her breath carries the Voice to all corners of Tamriel</type></nameType>
+                <gender>Female</gender>
+                <iconPath>UI/Deities/ESCP_DeityKynareth</iconPath>
+            </li>
+        </deityPresets>
+
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>ESCP_Backstory_Greybeard_Child</li>
+                    <li>ESCP_Backstory_Greybeard_Monk</li>
+                    <li>ESCP_Backstory_Greybeard_Pilgrim</li>
+                    <li>ESCP_Backstory_Greybeard_Master</li>
+                </categories>
+                <commonality>0.95</commonality>
+            </li>
+        </backstoryFilters>
+
+        <pawnGroupMakers>
+            <li>
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <ESCP_Pawnkind_Greybeard_Monk>8</ESCP_Pawnkind_Greybeard_Monk>
+                    <ESCP_Pawnkind_Greybeard_Adept>4</ESCP_Pawnkind_Greybeard_Adept>
+                    <ESCP_Pawnkind_Greybeard_Master>1</ESCP_Pawnkind_Greybeard_Master>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <options>
+                    <ESCP_Pawnkind_Greybeard_Monk>8</ESCP_Pawnkind_Greybeard_Monk>
+                    <ESCP_Pawnkind_Greybeard_Adept>4</ESCP_Pawnkind_Greybeard_Adept>
+                    <ESCP_Pawnkind_Greybeard_Master>1</ESCP_Pawnkind_Greybeard_Master>
+                </options>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <ESCP_Pawnkind_Greybeard_Monk>8</ESCP_Pawnkind_Greybeard_Monk>
+                    <ESCP_Pawnkind_Greybeard_Adept>4</ESCP_Pawnkind_Greybeard_Adept>
+                    <ESCP_Pawnkind_Greybeard_Master>2</ESCP_Pawnkind_Greybeard_Master>
+                </options>
+            </li>
+        </pawnGroupMakers>
+
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0, 35)</li>
+                <li>(70, 50)</li>
+                <li>(700, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+        <raidLootValueFromPointsCurve>
+            <points>
+                <li>(0, 0)</li>
+                <li>(100, 20)</li>
+                <li>(1000, 75)</li>
+                <li>(3000, 100)</li>
+            </points>
+        </raidLootValueFromPointsCurve>
+
+        <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+
+        <modExtensions>
+            <li Class="ESCP.Factions.FactionExtension_NamedSettlement">
+                <settlementName>High Hrothgar</settlementName>
+                <preferredHilliness>
+                    <li>Mountainous</li>
+                </preferredHilliness>
+                <allowedBiomes>
+                    <li>BorealForest</li>
+                    <li>Tundra</li>
+                    <li>IceSheet</li>
+                </allowedBiomes>
+                <searchRadius>40</searchRadius>
+                <maxSettlements>1</maxSettlements>
+            </li>
+            <li Class="ESCP.Factions.FactionExtension_FlavorOverride">
+                <newLabel>Order of the Greybeards</newLabel>
+            </li>
+            <li Class="ESCP.Factions.FactionExtension_BannedArrivalModes">
+                <arrivalModes>
+                    <li>EdgeDrop</li>
+                    <li>EdgeDropGroups</li>
+                    <li>CenterDrop</li>
+                    <li>RandomDrop</li>
+                </arrivalModes>
+            </li>
+        </modExtensions>
+
+    </FactionDef>
+
+</Defs>

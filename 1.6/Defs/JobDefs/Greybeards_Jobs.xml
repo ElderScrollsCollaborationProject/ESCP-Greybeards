@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <JobDef>
+        <defName>ESCP_LearnShout</defName>
+        <driverClass>ESCP.Core.Thuum.JobDriver_LearnShout</driverClass>
+        <reportString>meditating on a word wall.</reportString>
+        <playerInterruptible>true</playerInterruptible>
+        <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+    </JobDef>
+
+</Defs>

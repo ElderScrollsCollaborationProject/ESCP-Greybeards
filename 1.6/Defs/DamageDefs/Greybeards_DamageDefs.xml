@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <DamageDef>
+        <defName>ESCP_Damage_FusRoDah</defName>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <label>Thu'um</label>
+        <hasForcefulImpact>true</hasForcefulImpact>
+        <makesBlood>false</makesBlood>
+        <canInterruptJobs>true</canInterruptJobs>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} was hurled away by the Voice.</deathMessage>
+        <armorCategory>Blunt</armorCategory>
+    </DamageDef>
+
+</Defs>

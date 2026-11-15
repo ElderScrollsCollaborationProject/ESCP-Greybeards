@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <GeneDef MayRequire="Ludeon.RimWorld.Biotech">
+        <defName>ESCP_Gene_ThuumVoice</defName>
+        <label>Thu'um voice</label>
+        <description>Carriers bear a rare attunement to the thu'um, the dragon language of the Voice. This trait manifests in bloodlines trained over generations in the contemplative disciplines of the Greybeards, or in those born with an ancient connection to the dragon speech. The carrier can produce seven dragon shouts: Unrelenting Force, Fire Breath, Whirlwind Sprint, Marked for Death, Ice Form, Aura Whisper, and Dragonrend.</description>
+        <iconPath>UI/Icons/Genes/ESCP_Gene_Imperial_Bearing</iconPath>
+        <displayCategory>Miscellaneous</displayCategory>
+        <displayOrderInCategory>200</displayOrderInCategory>
+        <biostatCpx>3</biostatCpx>
+        <biostatMet>-3</biostatMet>
+        <abilities>
+            <li>ESCP_Ability_FusRoDah</li>
+            <li>ESCP_Ability_YolToorShul</li>
+            <li>ESCP_Ability_WuldNahKest</li>
+            <li>ESCP_Ability_KriiLunAus</li>
+            <li>ESCP_Ability_LizSlenNus</li>
+            <li>ESCP_Ability_LaasYahNir</li>
+            <li>ESCP_Ability_JoorZahFrul</li>
+        </abilities>
+    </GeneDef>
+
+</Defs>

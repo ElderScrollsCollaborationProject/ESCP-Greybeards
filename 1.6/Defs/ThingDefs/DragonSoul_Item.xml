@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingCategoryDef>
+        <defName>ESCP_DragonSouls</defName>
+        <label>dragon souls</label>
+        <parent>Items</parent>
+    </ThingCategoryDef>
+
+    <ThingDef>
+        <defName>ESCP_DragonSoul</defName>
+        <label>Dragon Soul</label>
+        <description>The soul of a dragon, distilled into a concentrated essence of power. The Greybeards teach that dragon souls are the key to unlocking the Thu'um. Without the soul of a dragon to fuel the learning, even the most dedicated student cannot absorb the words of a wall.</description>
+        <thingClass>ThingWithComps</thingClass>
+        <category>Item</category>
+        <graphicData>
+            <texPath>Things/Item/DragonSoul/ESCP_DragonSoul</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <color>(220,180,50)</color>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>60</MaxHitPoints>
+            <MarketValue>250</MarketValue>
+            <Mass>0.1</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <tradeability>None</tradeability>
+        <stackLimit>20</stackLimit>
+        <techLevel>Neolithic</techLevel>
+        <thingCategories>
+            <li>ESCP_DragonSouls</li>
+        </thingCategories>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <alwaysHaulable>true</alwaysHaulable>
+    </ThingDef>
+
+</Defs>
