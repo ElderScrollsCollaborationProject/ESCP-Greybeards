@@ -102,4 +102,101 @@
         <bodyTypeMale>Thin</bodyTypeMale>
     </BackstoryDef>
 
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Greybeard_GoatHerder_Child</defName>
+        <identifier>ESCP_Backstory_Greybeard_GoatHerder_Child</identifier>
+        <slot>Childhood</slot>
+        <title>Ivarstead goatherd</title>
+        <titleShort>goatherd</titleShort>
+        <description>[PAWN_nameDef] herded goats in the foothills below the Throat of the World. On still days [PAWN_pronoun] could hear the Greybeards shouting from the peak, and [PAWN_pronoun] tried to shout back.</description>
+        <skillGains>
+            <Animals>3</Animals>
+            <Melee>1</Melee>
+        </skillGains>
+        <spawnCategories>
+            <li>ESCP_Backstory_Greybeard_Child</li>
+        </spawnCategories>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Greybeard_PilgrimsChild_Child</defName>
+        <identifier>ESCP_Backstory_Greybeard_PilgrimsChild_Child</identifier>
+        <slot>Childhood</slot>
+        <title>pilgrim's child</title>
+        <titleShort>pilgrim</titleShort>
+        <description>[PAWN_nameDef] climbed the Seven Thousand Steps at [PAWN_possessive] parents' side and read every tablet along the way. [PAWN_pronoun] never quite came down from the mountain afterward.</description>
+        <skillGains>
+            <Intellectual>2</Intellectual>
+            <Social>1</Social>
+            <Melee>1</Melee>
+        </skillGains>
+        <spawnCategories>
+            <li>ESCP_Backstory_Greybeard_Child</li>
+        </spawnCategories>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Greybeard_Steward_Adult</defName>
+        <identifier>ESCP_Backstory_Greybeard_Steward_Adult</identifier>
+        <slot>Adulthood</slot>
+        <title>silent steward</title>
+        <titleShort>steward</titleShort>
+        <description>[PAWN_nameDef] keeps the stores and the fires at High Hrothgar and has not spoken aloud in years. [PAWN_pronoun] meditates on the Word while [PAWN_pronoun] cooks, and the other monks say [PAWN_possessive] soup is the most peaceful thing on the mountain.</description>
+        <skillGains>
+            <Intellectual>3</Intellectual>
+            <Cooking>3</Cooking>
+            <Artistic>2</Artistic>
+        </skillGains>
+        <workDisables>
+            <li>Mining</li>
+        </workDisables>
+        <bodyTypeFemale>Thin</bodyTypeFemale>
+        <bodyTypeMale>Thin</bodyTypeMale>
+        <spawnCategories>
+            <li>ESCP_Backstory_Greybeard_Monk</li>
+        </spawnCategories>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Greybeard_MountainGuide_Adult</defName>
+        <identifier>ESCP_Backstory_Greybeard_MountainGuide_Adult</identifier>
+        <slot>Adulthood</slot>
+        <title>mountain guide</title>
+        <titleShort>guide</titleShort>
+        <description>[PAWN_nameDef] leads pilgrims up the Throat of the World and drives off the trolls and wolves along the way. [PAWN_pronoun] has learned a single Word in all those years and is in no hurry to learn another.</description>
+        <skillGains>
+            <Animals>2</Animals>
+            <Melee>3</Melee>
+            <Social>3</Social>
+        </skillGains>
+        <bodyTypeFemale>Thin</bodyTypeFemale>
+        <bodyTypeMale>Thin</bodyTypeMale>
+        <spawnCategories>
+            <li>ESCP_Backstory_Greybeard_Pilgrim</li>
+        </spawnCategories>
+    </BackstoryDef>
+
+    <BackstoryDef>
+        <defName>ESCP_Backstory_Greybeard_KeeperOfTheWay_Adult</defName>
+        <identifier>ESCP_Backstory_Greybeard_KeeperOfTheWay_Adult</identifier>
+        <slot>Adulthood</slot>
+        <title>keeper of the Way</title>
+        <titleShort>keeper</titleShort>
+        <description>[PAWN_nameDef] has followed the Way of the Voice for most of a lifetime. [PAWN_possessive] Shout can split stone, and [PAWN_pronoun] uses it only to meditate.</description>
+        <skillGains>
+            <Intellectual>6</Intellectual>
+            <Artistic>4</Artistic>
+            <Social>2</Social>
+            <Melee>4</Melee>
+        </skillGains>
+        <workDisables>
+            <li>Mining</li>
+        </workDisables>
+        <bodyTypeFemale>Thin</bodyTypeFemale>
+        <bodyTypeMale>Thin</bodyTypeMale>
+        <spawnCategories>
+            <li>ESCP_Backstory_Greybeard_Master</li>
+        </spawnCategories>
+    </BackstoryDef>
+
 </Defs>
